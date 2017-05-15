@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/angular.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css"  >
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/main.css"><p></p>
+
+<script src="js/resistanceCal.js"></script>
+<title>Calculate</title>
+</head>
+<body ng-app="resistanceCal">l
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/search">Resistor</a>
+    </div>
+
+   
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Calculate Resistance </a></li>
+        <li><a href="#">Resistance Ledger</a></li>
+       
+      </ul>
+     
+     
+    </div>
+    
+    
+    
+    
+    
+  </div>
+</nav>
+	<div class="container">
+		
+			<div ng-controller="calculateRes" class="form-group">
+				<form action="#" >
+				<div class="row custom-padding">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="color1">Color 1</label> 
+					<select color-drop-down ng-model="color1" class="form-control"  > 
+						<option selected value="-1">Select</option>
+					</select> 
+
+										 
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="color2">Color 2</label> 
+					<select color-drop-down ng-model="color2" class="form-control"> 
+						<option selected="selected" value="-1">Select</option>
+					</select> 
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="color3">Color 3/Multiplier</label> 
+					<select color-drop-down ng-model="color3" class="form-control"> 
+						<option selected="selected" value="-1">Select</option>
+					</select> 
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="toleranceBand">Color 4/Tolerance</label> 
+					<select ng-model="toleranceBand" class="form-control"> 
+						<option selected="selected" value="-1">Select</option>
+					</select> 
+				</div>
+
+				
+				</div>
+				<div class="row custom-padding">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center"> 
+						<button class="btn btn-primary btn-lg" type="button" ng-click="calculateResistance()">Calculate</button>
+					</div>
+				</div>
+				<div class="row custom-padding">
+				<div class="result-div col-lg-6 col-md-6 col-sm-12 col-xs-12"> 
+					<label for="resistance">Resistance (in ohms)</label> 
+					<input type="text" name="resistance" class="form-control" value="{{resistance}}" disabled="true">
+				</div>
+				<div class="result-div col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<label for="tolerance">Tolerance</label> 
+					<input type="text" name="tolerance" class="form-control" ng-bind="{{tolerance}}" disabled="true">
+				</div>
+				</form>
+				</div>
+				
+
+
+			
+
+		</div>
+	</div>
+
+</body>
+
+</html>

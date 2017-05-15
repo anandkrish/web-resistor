@@ -1,0 +1,14 @@
+.hdDiv {
+	height: 40px;
+	padding: 6px;
+	padding-left: 20px;
+	font-size: large;
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color:#fcf8d2;
+}
+
+.custom-padding{
+	padding-top:5px;
+	padding-bottom: 5px;
+}

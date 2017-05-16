@@ -8,8 +8,10 @@ var resistanceCal=angular.module("resistanceCal",[]);
  		
 
  		$scope.calculateResistance=function() {
- 			console.log('Method called....');
- 			$scope.resistance =   parseInt($scope.color1) + parseInt($scope.color2); 
+ 			console.log('$scope.multiplier'+$scope.multiplier);
+ 			var res =   $scope.color1+ $scope.color2; 
+ 			$scope.resistance=parseInt(res)*Math.pow(10, $scope.multiplier);
+
  		};
  		
  	}]);
@@ -22,4 +24,15 @@ resistanceCal.directive('colorDropDown',function(){
 	};
 });
 
+resistanceCal.directive('toleranceDropDown',function(){
+	return{
+		templateUrl:'tolerance-drop-down.html'
+	}
+});
+
+resistanceCal.directive('multiplierDropDown', function(){
+	return{
+		templateUrl:'multiplier-drop-down.html'
+	}
+});
 

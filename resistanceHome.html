@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="css/main.css"><p></p>
 
 <script src="js/resistanceCal.js"></script>
-<title>Calculate</title>
+<title>Resistance In Your Hands</title>
 </head>
-<body ng-app="resistanceCal">l
+<body ng-app="resistanceCal">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     
@@ -61,13 +61,13 @@
 					</select> 
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="color3">Color 3/Multiplier</label> 
-					<select color-drop-down ng-model="color3" class="form-control"> 
+					<select multiplier-drop-down ng-model="multiplier" class="form-control"> 
 						<option selected="selected" value="-1">Select</option>
 					</select> 
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="toleranceBand">Color 4/Tolerance</label> 
-					<select ng-model="toleranceBand" class="form-control"> 
-						<option selected="selected" value="-1">Select</option>
+					<select tolerance-drop-down ng-model="toleranceBand" class="form-control"> 
+						<option  selected="selected" value="-1">Select</option>
 					</select> 
 				</div>
 

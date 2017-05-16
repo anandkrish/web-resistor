@@ -1,0 +1,9 @@
+{
+  "name" : "rescal",
+  "description" : "J A web based tool for calculating resistance values using color code. ",
+  "homepage" : "http://localhost:8080/resistor",
+  "author" : "Anand k",
+  "repository" : {"type": "git", "url": "https://github.com/anandkrish/web-resistor"},
+  "main" : "server.js",
+  
+}

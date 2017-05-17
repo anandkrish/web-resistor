@@ -5,14 +5,16 @@ var resistanceCal=angular.module("resistanceCal",[]);
 
  	resistanceCal.controller('calculateRes', ['$scope', function($scope){
  		
- 		
+ 		$scope.multiplier='-1a';
 
  		$scope.calculateResistance=function() {
- 			console.log('$scope.multiplier'+$scope.multiplier);
+ 			//console.log('$scope.multiplier'+$scope.multiplier);
  			var res =   $scope.color1+ $scope.color2; 
  			$scope.resistance=parseInt(res)*Math.pow(10, $scope.multiplier);
 
  		};
+
+ 		
  		
  	}]);
 

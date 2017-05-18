@@ -14,7 +14,9 @@ var resistanceCal=angular.module("resistanceCal",[]);
 
  		};
 
- 		
+ 		angular.element(document).ready(function () {
+				$('#color1 option')[1].remove();
+    		});
  		
  	}]);
 
@@ -37,4 +39,17 @@ resistanceCal.directive('multiplierDropDown', function(){
 		templateUrl:'multiplier-drop-down.html'
 	}
 });
+
+resistanceCal.filter('kiloOhmConversion',['$filter',function($filter){
+	return function(input){
+		if(parseInt(input) >= 1000){
+			return $filter('number')(input/1000)+' k';
+		}
+		else{
+			return input;
+		}
+		}
+
+
+}]);
 

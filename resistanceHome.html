@@ -23,14 +23,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/search">Resistor</a>
+      <a class="navbar-brand" href="/resistor">ResCal</a>
     </div>
 
    
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Calculate Resistance </a></li>
-        <li><a href="#">Resistance Ledger</a></li>
+        <li class="active"><a href="/resistor">Calculate Resistance </a></li>
+        <!-- <li><a href="#">Resistance Ledger</a></li> -->
        
       </ul>
      
@@ -48,23 +48,23 @@
 			<div ng-controller="calculateRes" class="form-group">
 				<form action="#" >
 				<div class="row custom-padding">
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="color1">Color 1</label> 
+					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12"><label for="color1">Color 1</label> 
 					<select color-drop-down ng-model="color1" class="form-control"  ng-init="color1='-1'"  id="color1">  
 					</select> 
 
 										 
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="color2">Color 2</label> 
+				<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12"><label for="color2">Color 2</label> 
 					<select color-drop-down ng-model="color2" class="form-control" id="color2" ng-init="color2='-1'" > 
 						
 					</select> 
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="color3">Color 3/Multiplier</label> 
+				<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12"><label for="color3">Color 3/Multiplier</label> 
 					<select  multiplier-drop-down ng-model="multiplier" class="form-control" id="multiplier"> 
 						
 					</select> 
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="toleranceBand">Color 4/Tolerance</label> 
+				<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12"><label for="toleranceBand">Color 4/Tolerance</label> 
 					<select ng-init="toleranceBand='-1'" tolerance-drop-down ng-model="toleranceBand" class="form-control" id="tolerance"> 
 						
 					</select> 
@@ -80,7 +80,7 @@
 				<div class="row custom-padding">
 				<div class="result-div col-lg-6 col-md-6 col-sm-12 col-xs-12"> 
 					<label for="resistance">Resistance (in ohms)</label> 
-					<input type="text" name="resistance" class="form-control" value="{{resistance}}" disabled="true">
+					<input type="text" name="resistance" class="form-control" value="{{resistance | kiloOhmConversion}}" disabled="true">
 				</div>
 				<div class="result-div col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<label for="tolerance">Tolerance</label>  
